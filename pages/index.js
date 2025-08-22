@@ -6,14 +6,14 @@ export default function Home() {
     const featuredEvents = getFeaturedEvents();
 
     const env = process.env.NODE_ENV;
-    const apiKey = process.env.apiKey;
-
+    console.log(env);
+    const test = process.env.NEXT_PUBLIC_TEST;
+    console.log(test);
 
     return (
         <div>
             <EventList items={featuredEvents} />
-            <p>{env}</p>
-            <p>{apiKey}</p>
+            <p>{test}</p>
         </div>
     )
 }
